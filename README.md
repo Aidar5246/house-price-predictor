@@ -41,9 +41,10 @@ poetry run pytest
 ## Run code quality checks
 
 ```bash
-poetry run ruff check .
-poetry run ruff format --check .
+poetry run black --check src tests run.py
+poetry run flake8 src tests run.py
 poetry run mypy src
+poetry run pytest
 ```
 
 ## Install Git hooks
